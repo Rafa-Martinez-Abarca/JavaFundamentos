@@ -6,76 +6,44 @@ public class Main {
 
      
     public static void main(String[] args) {
-
-         Scanner sc = new Scanner(System.in);
-
-         String contrasenia = "Java123";
-         
-         int nuevoNuemero;
-         String pregunta = "s";
-         int numIntentos = 3;
-         String insertacontr;
-         do{
-            
-
-
-            System.out.println("Introduce la contraseña ");
-            insertacontr = sc.nextLine();
-            
-           if(contrasenia.equals(insertacontr)){
-
-            System.out.println("contraseña correcta ");
-
-       } else {
-
-              numIntentos--;
-                
-                System.out.println("Tienes " + numIntentos + " intentos.");
-          
-            
-           }
-            
-         } while (!contrasenia.equals(insertacontr) && numIntentos >= 1 );
-
-            
-                if(contrasenia.equals(insertacontr)){
-
-                    System.out.println("Bienvenido. ");
-
-                    do {
-                        System.out.println("que numero quieres multipicar? ");
-                        nuevoNuemero = sc.nextInt();
-                        for(int i = 1; i <= 10; i++){
-                            System.out.println(
-                            nuevoNuemero + " * " + i + " = " + (nuevoNuemero * i));
-                        }
-
-                        System.out.println("Quieres volver a imprimir otra tabla? s/n ");
-                        sc.nextLine();
-                        pregunta = sc.nextLine();
-
-                        
-                    } while (pregunta.equals("s"));
-                    
-                    System.out.println("Hasta pronto ");
-                
-                
-                
-                } else {
-
-                     System.out.println("Usuario bloqueado. ");
-                }
-                    
-            
-                 
-            
-               
-            }
-
-             
-            }
-           
-
         
-    
+ Scanner sc = new Scanner(System.in);
+
+int[] numeros = new int[5];
+for(int i = 0; i < numeros.length; i++){
+System.out.println("Que numero quieres? ");
+
+numeros[i] = sc.nextInt();
+}
+
+int num;
+boolean encontrado = false;
+
+System.out.println("Que numero te gustaria buscar? ");
+num = sc.nextInt();
+
+for ( int i = 0; i < numeros.length; i++){
+
+
+
+
+if( numeros[i] == num){
+
+    encontrado = true;
+
+} 
+
+}
+    if(encontrado){
+        System.out.println("Existe ");
+    }else {
+        System.out.println("No existe ");
+    }
+
+     sc.close();
+}
+
+}
+         
+        
 
