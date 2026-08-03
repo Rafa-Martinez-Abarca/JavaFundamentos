@@ -1,24 +1,28 @@
-public class Perro extends Animales {
+public class Perro extends Animales{
 
     String raza;
 
     public Perro(String nombre, int edad, String raza){
         super(nombre, edad);
-        this.raza = raza;
+        this.raza = raza; 
     }
 
-    public void moverCola(){
-        System.out.println(" El perro mueve la cola ");
+    public String getRaza(){
+        return raza;
     }
+
     @Override
+
     public void hacerSonido(){
-        
-        System.out.println(" Guau gua ");
+        System.out.println(" Guau guau");
     }
 
-    @Override
-    public String toString(){
-        return super.toString() + " Raza " + raza;
-    }
+@Override 
+
+public String toString(){
+   return super.toString() + "Raza: " + raza;
+}
+
+
     
 }

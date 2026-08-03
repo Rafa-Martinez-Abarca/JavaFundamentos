@@ -1,34 +1,34 @@
-public class Animales {
+public abstract class Animales {
 
     String nombre;
     int edad;
-    
 
-    public Animales(String nombre, int edad){
+    public Animales(String nombre, int edad) {
         this.nombre = nombre;
         this.edad = edad;
     }
 
-    public String getnombre(){
+    public String getNombre() {
         return nombre;
     }
 
-    public int getEdad(){
+    public int getEdad() {
         return edad;
     }
 
-    public void setEdad(int edad){
+    public void setEdad(int edad) {
         this.edad = edad;
     }
 
-    public void hacerSonido(){
-       System.out.println("El animal hace un sonido ");
+    public abstract void hacerSonido();
+
+    public void comer() {
+        System.out.println("El animal está comiendo.");
     }
 
     @Override
-
-    public String toString(){
-        return "El nombre del animal es: " + nombre + " la edad es: " + edad + " años, ";
+    public String toString() {
+        return "El nombre es: " + nombre +
+               ", tiene: " + edad + " años.";
     }
-    
 }

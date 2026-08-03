@@ -1,38 +1,26 @@
-
-//import java.util.Scanner;
-
 public class Main {
-    
 
-     
     public static void main(String[] args) {
-     
-Animales[] animales = new Animales[3];
 
-animales[0] = new Perro("Roky", 4, " Labardor");
-animales[1] =  new Gato("Misifu, ", 5, " Azules. ");
-animales[2] = new Elefante("Dumbo, ", 2, 105.8);
+        Animales[] animal = new Animales[4];
 
-for(int i = 0; i < animales.length; i++){
+        animal[0] = new Perro("Roko", 2, "Labrador");
+        animal[1] = new Delfin("Deltox", 6);
+        animal[2] = new Agila("Alitas", 4);
+        animal[3] = new Pato("Donald", 7);
 
-animales[i].hacerSonido();
+        for (int i = 0; i < animal.length; i++) {
+            System.out.println(animal[i]);
+            animal[i].hacerSonido();
+            animal[i].comer();
+        }
 
-System.out.println(animales[i]);
+        Pato pato = new Pato("Roland", 3);
 
+        pato.volar();
+        pato.nadar();
+
+        Volador volarin = new Agila("Selt", 3);
+        volarin.volar();
+    }
 }
-
-
-}
-
-
-
-}
-
-
-
-
-
-
-         
-        
-
